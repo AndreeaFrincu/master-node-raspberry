@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as Highcharts from 'highcharts';
 import HC_exporting from 'highcharts/modules/exporting';
-import {MetricsData, TempService} from "../../services/temp.service";
+import {MetricsData, LumService} from "../../services/lum.service";
 
 @Component({
   selector: 'app-widget-area-light',
@@ -24,7 +24,7 @@ export class WidgetAreaLightComponent implements OnInit {
   initializeCategory: number[] = [];
   initializeData: number[] = [];
 
-  constructor(private hum: TempService) {
+  constructor(private hum: LumService) {
     this.setConfig(this.initializeCategory, this.initializeData);
   }
 
