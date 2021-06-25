@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="header">
+        <h2>{{ label }}</h2>
+        <mat-icon>scatter_plot</mat-icon>
+    </div>
+
+    <div class="info">
+        <h3>General</h3>
+        <div class="general">
+            <div class="tag">
+                <span>Status</span>
+                <span>IP address</span>
+            </div>
+            <div class="value">
+                <span>{{ node_status }}</span>
+                <span>{{ node_ip }}</span>
+            </div>
+        </div>
+
+        <h3>Capacity</h3>
+        <div class="capacity">
+            <div class="tag">
+                <span>CPU</span>
+                <span>Memory</span>
+                <span>Pods</span>
+            </div>
+            <div class="value">
+                <span>{{ cpu }}</span>
+                <span>{{ memory }}</span>
+                <span>{{ pods }}</span>
+            </div>
+        </div>
+    </div>
+</div>

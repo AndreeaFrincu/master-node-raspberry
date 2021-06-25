@@ -1,0 +1,39 @@
+h2 {
+    font-style: oblique;
+    font-weight: 500;
+    font-size: 20px;
+    padding-bottom: 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h3 {
+    color: #2979ff;
+    padding-top: 20px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+mat-icon {
+    color: #f44b7c;
+}
+
+.general, .capacity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tag, .value {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tag {
+    font-style: oblique;
+}

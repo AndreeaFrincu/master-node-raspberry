@@ -1,0 +1,49 @@
+<div>
+    <mat-tab-group animationDuration="700ms">
+        <mat-tab label="Temperature" mat-align-tabs="start">
+            <app-widget-area-temp></app-widget-area-temp>
+        </mat-tab>
+        <mat-tab label="Humidity" mat-align-tabs="start">
+            <app-widget-area-hum></app-widget-area-hum>
+        </mat-tab>
+        <mat-tab label="Luminous Intensity" mat-align-tabs="start">
+            <app-widget-area-light></app-widget-area-light>
+        </mat-tab>
+      </mat-tab-group>
+</div>
+
+<br>
+<mat-divider></mat-divider>
+<h2>Last values</h2>
+<br>
+
+<button mat-raised-button color="accent" >refresh</button>
+<br>
+<br>
+<br>
+
+<div class="stats-card" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+    <mat-card fxFlex="30">
+        <app-widget-card-temp label="Temperature" icon="wb_cloudy"></app-widget-card-temp>
+    </mat-card>
+    <mat-card fxFlex="30">
+        <app-widget-card-hum label="Humidity" icon="opacity"></app-widget-card-hum>
+    </mat-card>
+    <mat-card fxFlex="30">
+        <app-widget-card-temp label="Luminous Intensity" icon="wb_incandescent"></app-widget-card-temp>
+    </mat-card>
+</div>
+
+<!-- <br>
+<mat-divider></mat-divider>
+<h2>Control devices</h2>
+<br>
+
+<div class="control-card" fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="20px">
+    <mat-card fxFlex="20">
+        <app-widget-card-control label="Smart socket" icon="power"></app-widget-card-control>
+    </mat-card>
+    <mat-card fxFlex="20">
+        <app-widget-card-control label="LED" icon="offline_bolt"></app-widget-card-control>
+    </mat-card>
+</div> -->
