@@ -62,7 +62,7 @@ export class WidgetAreaLightComponent implements OnInit {
       credits: {
         enabled: false
       },
-      colors: ['#5e35b1'],
+      colors: ['#00b0ff'],
       series: [{
         name: 'sensor luminosity',
         data: yAxisData
