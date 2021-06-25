@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ɵɵqueryRefresh } from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 import { TempService } from '../../services/temp.service';
 
 @Component({
@@ -15,19 +15,19 @@ import { TempService } from '../../services/temp.service';
     <span class="icon">
       <mat-icon>{{ icon }}</mat-icon>
     </span>
-    <h4 *ngFor="let data of temp_data; let first = first; let last = last" 
+    <h4 *ngFor="let data of temp_data; let first = first; let last = last"
     [ngClass]="{ first: first, last: last }">{{ data.value }}°C</h4>
 
     <div class="time">
-        <span class="date" *ngFor="let data of temp_data; let first = first; let last = last" 
+        <span class="date" *ngFor="let data of temp_data; let first = first; let last = last"
         [ngClass]="{ first: first, last: last }">{{ data.datee }}</span>
-        <span class="time_data" *ngFor="let data of temp_data; let first = first; let last = last" 
+        <span class="time_data" *ngFor="let data of temp_data; let first = first; let last = last"
         [ngClass]="{ first: first, last: last }">{{ data.timee }}</span>
     </div>
   </div>
   `
 })
-export class WidgetCardTempComponent {
+export class WidgetCardTempComponent implements OnInit {
 
   @Input()
   label!: string;
@@ -38,7 +38,9 @@ export class WidgetCardTempComponent {
   // array with data from api
   temp_data: any;
 
-  constructor(private temp: TempService) {
+  constructor(private temp: TempService) { }
+
+  ngOnInit() {
     this.temp.getData().subscribe(data => {
       console.warn(data);
       this.temp_data = data;
