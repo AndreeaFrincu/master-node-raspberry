@@ -25,8 +25,6 @@ import { WidgetCardControlComponent } from './widgets/widget-card-control/widget
 import { WidgetCardNodeComponent } from './widgets/widget-card-node/widget-card-node.component';
 import { WidgetCardAlertComponent } from './widgets/widget-card-alert/widget-card-alert.component';
 import { WidgetCardHumComponent } from './widgets/widget-card-hum/widget-card-hum.component';
-import { LumComponent } from './widgets/lum/lum.component';
-import { WidgetCardLumComponent } from './widgets/widget-card-lum/widget-card-lum.component';
 import { WidgetCardLightComponent } from './widgets/widget-card-light/widget-card-light.component';
 
 @NgModule({
@@ -42,8 +40,6 @@ import { WidgetCardLightComponent } from './widgets/widget-card-light/widget-car
     WidgetCardNodeComponent,
     WidgetCardAlertComponent,
     WidgetCardHumComponent,
-    LumComponent,
-    WidgetCardLumComponent,
     WidgetCardLightComponent
   ],
   imports: [
@@ -72,7 +68,8 @@ import { WidgetCardLightComponent } from './widgets/widget-card-light/widget-car
     WidgetCardControlComponent,
     WidgetCardNodeComponent,
     WidgetCardAlertComponent,
-    WidgetCardHumComponent
+    WidgetCardHumComponent,
+    WidgetCardLightComponent
   ],
   providers: [],
 })
