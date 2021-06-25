@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as Highcharts from 'highcharts';
 import HC_exporting from 'highcharts/modules/exporting';
+import {MetricsData, TempService} from "../../services/temp.service";
 
 @Component({
   selector: 'app-widget-area-light',
@@ -12,9 +13,22 @@ export class WidgetAreaLightComponent implements OnInit {
   chartOptions!: {};
   Highcharts = Highcharts;
 
-  constructor() { }
+  // array with data from api
+  lum_data: MetricsData[] = [];
 
-  ngOnInit() {
+  // arrays for xAxis and yAxis to store data from API
+  x_axis_label: number[] = [];
+  y_axis_label: number[] = [];
+
+  // empty arrays for xAxis and yAxis to store nothing before fetching data from API
+  initializeCategory: number[] = [];
+  initializeData: number[] = [];
+
+  constructor(private hum: TempService) {
+    this.setConfig(this.initializeCategory, this.initializeData);
+  }
+
+  setConfig(xAxisCategory: number[], yAxisData: number[]) {
     this.chartOptions = {
       chart: {
         type: 'area'
@@ -33,7 +47,7 @@ export class WidgetAreaLightComponent implements OnInit {
         backgroundColor: '#FFFFFF'
       },
       xAxis: {
-        categories: ['Apples', 'Pears', 'Oranges', 'Bananas', 'Grapes', 'Plums', 'Strawberries', 'Raspberries']
+        categories: xAxisCategory
       },
       yAxis: {
         title: {
@@ -48,12 +62,28 @@ export class WidgetAreaLightComponent implements OnInit {
       credits: {
         enabled: false
       },
-      colors: ['#00bcd4'],
+      colors: ['#5e35b1'],
       series: [{
-        name: 'sensor luminous intensity',
-        data: [0, 1, 4, 4, 5, 2, 3, 7]
+        name: 'sensor luminosity',
+        data: yAxisData
       }]
     };
+  }
+
+  ngOnInit() {
+    this.hum.getData().subscribe(data => {
+      console.warn(data);
+      this.lum_data = data;
+
+      this.x_axis_label = this.lum_data.map(i => i.id);
+      console.log(this.x_axis_label);
+
+      this.y_axis_label = this.lum_data.map(i => i.value);
+      console.log(this.y_axis_label);
+
+      this.setConfig(this.x_axis_label, this.y_axis_label);
+    });
+
 
     HC_exporting(Highcharts);
 

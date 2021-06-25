@@ -15,13 +15,13 @@ import { HumService } from '../../services/hum.service';
     <span class="icon">
       <mat-icon>{{ icon }}</mat-icon>
     </span>
-    <h4 *ngFor="let data of hum_data; let first = first; let last = last" 
+    <h4 *ngFor="let data of hum_data; let first = first; let last = last"
     [ngClass]="{ first: first, last: last }">{{ data.value }}%</h4>
 
     <div class="time">
-        <span class="date" *ngFor="let data of hum_data; let first = first; let last = last" 
+        <span class="date" *ngFor="let data of hum_data; let first = first; let last = last"
         [ngClass]="{ first: first, last: last }">{{ data.datee }}</span>
-        <span class="time_data" *ngFor="let data of hum_data; let first = first; let last = last" 
+        <span class="time_data" *ngFor="let data of hum_data; let first = first; let last = last"
         [ngClass]="{ first: first, last: last }">{{ data.timee }}</span>
     </div>
   </div>
@@ -38,14 +38,13 @@ export class WidgetCardHumComponent implements OnInit {
   // array with data from api
   hum_data: any;
 
-  constructor(private hum: HumService) {
+  constructor(private hum: HumService) { }
+
+  ngOnInit() {
     this.hum.getData().subscribe(data => {
       console.warn(data);
       this.hum_data = data;
     });
-  }
-
-  ngOnInit(): void {
   }
 
 }

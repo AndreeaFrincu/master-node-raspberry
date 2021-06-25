@@ -7,7 +7,7 @@ export interface MetricsData {
   location: string;
   collector: string;
   metricType: number;
-  isSyncronized: boolean;
+  isSynchronized: boolean;
   value: number;
 }
 

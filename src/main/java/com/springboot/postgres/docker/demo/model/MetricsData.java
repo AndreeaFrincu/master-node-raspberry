@@ -23,7 +23,7 @@ public class MetricsData extends MetricsCheck {
     private String location;
     private String collector;
     private String metricType;
-    private boolean isSyncronized;
+    private boolean isSynchronized;
     private float value;
 
     public int getId() {
@@ -58,12 +58,12 @@ public class MetricsData extends MetricsCheck {
         this.metricType = metricType;
     }
 
-    public boolean isSyncronized() {
-        return isSyncronized;
+    public boolean isSynchronized() {
+        return isSynchronized;
     }
 
-    public void setSyncronized(boolean syncronized) {
-        isSyncronized = syncronized;
+    public void setSynchronized(boolean aSynchronized) {
+        isSynchronized = aSynchronized;
     }
 
     public float getValue() {
