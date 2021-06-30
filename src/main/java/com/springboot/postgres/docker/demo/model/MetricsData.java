@@ -4,27 +4,38 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.CreatedDate;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-@EqualsAndHashCode(callSuper = true)
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class MetricsData extends MetricsCheck {
+public class MetricsData {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+
+    @Column(name = "collected_at", nullable = false)
+    private String collectedAt;
+
     private String location;
     private String collector;
     private String metricType;
     private boolean isSynchronized;
     private float value;
+
+    @PrePersist
+    protected void onCreate() throws ParseException {
+        Date date1 = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+        collectedAt = sdf.format(date1);
+    }
 
     public int getId() {
         return id;

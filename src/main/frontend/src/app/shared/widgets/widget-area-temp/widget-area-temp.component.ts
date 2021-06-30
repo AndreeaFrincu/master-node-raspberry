@@ -18,18 +18,18 @@ export class WidgetAreaTempComponent implements OnInit {
   temp_data: MetricsData[] = [];
 
   // arrays for xAxis and yAxis to store data from API
-  x_axis_label: number[] = [];
+  x_axis_label: string[] = [];
   y_axis_label: number[] = [];
 
   // empty arrays for xAxis and yAxis to store nothing before fetching data from API
-  initializeCategory: number[] = [];
+  initializeCategory: string[] = [];
   initializeData: number[] = [];
 
   constructor(private hum: TempService) {
     this.setConfig(this.initializeCategory, this.initializeData);
   }
 
-  setConfig(xAxisCategory: number[], yAxisData: number[]) {
+  setConfig(xAxisCategory: string[], yAxisData: number[]) {
     this.chartOptions = {
       chart: {
         type: 'area'
@@ -76,7 +76,7 @@ export class WidgetAreaTempComponent implements OnInit {
       console.warn(data);
       this.temp_data = data;
 
-      this.x_axis_label = this.temp_data.map(i => i.id);
+      this.x_axis_label = this.temp_data.map(i => i.collectedAt);
       console.log(this.x_axis_label);
 
       this.y_axis_label = this.temp_data.map(i => i.value);
