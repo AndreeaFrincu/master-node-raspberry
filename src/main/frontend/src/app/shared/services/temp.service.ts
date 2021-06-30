@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 
 export interface MetricsData {
   id: number;
+  collectedAt: string;
   location: string;
   collector: string;
   metricType: number;
