@@ -1,0 +1,46 @@
+<h1>Overview</h1>
+<mat-divider></mat-divider>
+
+<mat-tab-group>
+  <mat-tab label="Monitored Locations"></mat-tab>
+</mat-tab-group>
+
+<div class="cards-wrapper">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Smart Building</mat-card-title>
+      <mat-card-subtitle>Collector device: RaspberryPi-02</mat-card-subtitle>
+    </mat-card-header>
+    <div class="card-content">
+      <img mat-card-image src="assets/smart-house.png" alt="smart building icon">
+      <mat-card-content>
+        <p>
+          This node presents a classification of data collection methods to monitor the thermal
+          comfort and luminous intensity of the building, thus promissing good indoor environment
+          for the building's occupants.
+        </p>
+      </mat-card-content>
+    </div>
+    <button mat-raised-button color="primary" routerLink="/smart_building">See graphs</button>
+  </mat-card>
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Data Center</mat-card-title>
+      <mat-card-subtitle>Collector device: RaspberryPi-03</mat-card-subtitle>
+    </mat-card-header>
+    <div class="card-content">
+      <img mat-card-image src="assets/cpu.png" alt="data center icon">
+      <mat-card-content>
+        <p>
+          This node focuses on monitoring supported elements such as data center
+          temperature and humidity to be up to date with heating and ventilation systems'
+          health, and air quality, meaning measuring the levels of CO2 to prevent fires.
+        </p>
+      </mat-card-content>
+    </div>
+    <button mat-raised-button color="primary" routerLink="/data_center">See graphs</button>
+  </mat-card>
+</div>

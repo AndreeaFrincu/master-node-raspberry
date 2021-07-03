@@ -53,4 +53,9 @@ public class MetricsController {
         return metricsService.findAllByMetricType(metricType);
     }
 
+    @GetMapping("/metrics/by-type-and-location/{metricType}/{location}")
+    public List<MetricsData> findAllByMetricTypeAndLocation(@PathVariable String metricType, @PathVariable String location) {
+        return metricsService.findAllByMetricTypeAndLocation(metricType, location);
+    }
+
 }

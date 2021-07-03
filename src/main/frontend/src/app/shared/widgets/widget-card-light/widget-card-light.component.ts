@@ -3,7 +3,7 @@ import {LumService} from "../../services/lum.service";
 
 @Component({
   selector: 'app-widget-card-light',
-  //templateUrl: './widget-card-hum.component.html',
+  //templateUrl: './widget-card-hum-dc.component.html',
   styleUrls: ['./widget-card-light.component.scss'],
   template: `
   <div class="text">
@@ -16,14 +16,7 @@ import {LumService} from "../../services/lum.service";
       <mat-icon>{{ icon }}</mat-icon>
     </span>
     <h4 *ngFor="let data of lum_data; let first = first; let last = last"
-    [ngClass]="{ first: first, last: last }">{{ data.value }}%</h4>
-
-    <div class="time">
-        <span class="date" *ngFor="let data of lum_data; let first = first; let last = last"
-        [ngClass]="{ first: first, last: last }">{{ data.datee }}</span>
-        <span class="time_data" *ngFor="let data of lum_data; let first = first; let last = last"
-        [ngClass]="{ first: first, last: last }">{{ data.timee }}</span>
-    </div>
+    [ngClass]="{ first: first, last: last }">{{ data.value }} lux</h4>
   </div>
   `
 })

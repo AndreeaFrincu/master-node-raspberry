@@ -34,6 +34,10 @@ public class MetricsService {
         return metricsRepository.findAllByMetricType(metricType);
     }
 
+    public List<MetricsData> findAllByMetricTypeAndLocation(String metricType, String location) {
+        return metricsRepository.findAllByMetricTypeAndLocation(metricType, location);
+    }
+
     public void delete(MetricsData metrics) {
         metricsRepository.delete(metrics);
     }

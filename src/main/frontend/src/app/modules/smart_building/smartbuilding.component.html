@@ -1,0 +1,32 @@
+<h1>Smart Building</h1>
+<mat-divider></mat-divider>
+
+<div>
+  <mat-tab-group animationDuration="700ms">
+    <mat-tab label="Temperature" mat-align-tabs="start">
+      <app-widget-area-temp-sh></app-widget-area-temp-sh>
+    </mat-tab>
+    <mat-tab label="Humidity" mat-align-tabs="start">
+      <app-widget-area-hum-sh></app-widget-area-hum-sh>
+    </mat-tab>
+    <mat-tab label="Luminous Intensity" mat-align-tabs="start">
+      <app-widget-area-light></app-widget-area-light>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+
+<br>
+<mat-divider></mat-divider>
+<h2>Last values</h2>
+
+<div class="stats-card" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+  <mat-card fxFlex="30">
+    <app-widget-card-temp-sh label="Temperature" icon="wb_cloudy"></app-widget-card-temp-sh>
+  </mat-card>
+  <mat-card fxFlex="30">
+    <app-widget-card-hum-sh label="Humidity" icon="opacity"></app-widget-card-hum-sh>
+  </mat-card>
+  <mat-card fxFlex="30">
+    <app-widget-card-light label="Luminous Intensity" icon="wb_incandescent"></app-widget-card-light>
+  </mat-card>
+</div>

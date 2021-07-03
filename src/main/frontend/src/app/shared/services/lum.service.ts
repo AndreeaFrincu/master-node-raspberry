@@ -20,7 +20,7 @@ export class LumService {
   constructor(private http: HttpClient) { }
 
   getData(): Observable<MetricsData[]> {
-    let url="/api/metrics/by-type/luminosity";
+    let url="/api/metrics/by-type-and-location/luminosity/smarthome";
     return this.http.get<MetricsData[]>(url);
   }
 }

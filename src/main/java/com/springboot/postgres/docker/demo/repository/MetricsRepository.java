@@ -9,5 +9,5 @@ import java.util.List;
 public interface MetricsRepository extends JpaRepository<MetricsData, Integer> {
 
     List<MetricsData> findAllByMetricType(@Param("metricType") String metricType);
-
+    List<MetricsData> findAllByMetricTypeAndLocation(@Param("metricType") String metricType, @Param("location") String location);
 }
