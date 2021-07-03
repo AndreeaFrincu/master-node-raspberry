@@ -1,0 +1,32 @@
+<h1>Data Center</h1>
+<mat-divider></mat-divider>
+
+<div>
+  <mat-tab-group animationDuration="700ms">
+    <mat-tab label="Temperature" mat-align-tabs="start">
+      <app-widget-area-temp-dc></app-widget-area-temp-dc>
+    </mat-tab>
+    <mat-tab label="Humidity" mat-align-tabs="start">
+      <app-widget-area-hum-dc></app-widget-area-hum-dc>
+    </mat-tab>
+    <mat-tab label="Air Quality" mat-align-tabs="start">
+      <app-widget-area-air></app-widget-area-air>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+
+<br>
+<mat-divider></mat-divider>
+<h2>Last values</h2>
+
+<div class="stats-card" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+  <mat-card fxFlex="30">
+    <app-widget-card-temp-dc label="Temperature" icon="wb_cloudy"></app-widget-card-temp-dc>
+  </mat-card>
+  <mat-card fxFlex="30">
+    <app-widget-card-hum-dc label="Humidity" icon="opacity"></app-widget-card-hum-dc>
+  </mat-card>
+  <mat-card fxFlex="30">
+    <app-widget-card-air label="Air Quality" icon="all_inclusive"></app-widget-card-air>
+  </mat-card>
+</div>

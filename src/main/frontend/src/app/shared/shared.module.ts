@@ -16,30 +16,36 @@ import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { WidgetAreaTempComponent } from './widgets/widget-area-temp/widget-area-temp.component';
-import { WidgetAreaHumComponent } from './widgets/widget-area-hum/widget-area-hum.component';
+import { WidgetAreaTempShComponent } from './widgets/widget-area-temp-sh/widget-area-temp-sh.component';
+import { WidgetAreaTempDcComponent } from './widgets/widget-area-temp-dc/widget-area-temp-dc.component';
+import { WidgetAreaHumDcComponent } from './widgets/widget-area-hum-dc/widget-area-hum-dc.component';
+import { WidgetAreaHumShComponent } from './widgets/widget-area-hum-sh/widget-area-hum-sh.component';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { WidgetAreaLightComponent } from './widgets/widget-area-light/widget-area-light.component';
-import { WidgetCardTempComponent } from './widgets/widget-card-temp/widget-card-temp.component';
-import { WidgetCardControlComponent } from './widgets/widget-card-control/widget-card-control.component';
-import { WidgetCardNodeComponent } from './widgets/widget-card-node/widget-card-node.component';
-import { WidgetCardAlertComponent } from './widgets/widget-card-alert/widget-card-alert.component';
-import { WidgetCardHumComponent } from './widgets/widget-card-hum/widget-card-hum.component';
-import { WidgetCardLightComponent } from './widgets/widget-card-light/widget-card-light.component';
+import { WidgetCardTempDcComponent } from './widgets/widget-card-temp-dc/widget-card-temp-dc.component';
+import { WidgetCardTempShComponent } from './widgets/widget-card-temp-sh/widget-card-temp-sh.component';
+import { WidgetCardHumDcComponent } from './widgets/widget-card-hum-dc/widget-card-hum-dc.component';
+import { WidgetCardHumShComponent } from './widgets/widget-card-hum-sh/widget-card-hum-sh.component';
+import { WidgetAreaAirComponent } from './widgets/widget-area-air/widget-area-air.component';
+import { WidgetCardAirComponent } from './widgets/widget-card-air/widget-card-air.component';
+import {WidgetCardLightComponent} from "./widgets/widget-card-light/widget-card-light.component";
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    WidgetAreaTempComponent,
-    WidgetAreaHumComponent,
+    WidgetAreaTempShComponent,
+    WidgetAreaTempDcComponent,
+    WidgetAreaHumDcComponent,
+    WidgetAreaHumShComponent,
     WidgetAreaLightComponent,
-    WidgetCardTempComponent,
-    WidgetCardControlComponent,
-    WidgetCardNodeComponent,
-    WidgetCardAlertComponent,
-    WidgetCardHumComponent,
+    WidgetCardTempDcComponent,
+    WidgetCardTempShComponent,
+    WidgetCardHumDcComponent,
+    WidgetCardHumShComponent,
+    WidgetAreaAirComponent,
+    WidgetCardAirComponent,
     WidgetCardLightComponent
   ],
   imports: [
@@ -61,14 +67,17 @@ import { WidgetCardLightComponent } from './widgets/widget-card-light/widget-car
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    WidgetAreaTempComponent,
-    WidgetAreaHumComponent,
+    WidgetAreaTempShComponent,
+    WidgetAreaTempDcComponent,
+    WidgetAreaHumDcComponent,
+    WidgetAreaHumShComponent,
     WidgetAreaLightComponent,
-    WidgetCardTempComponent,
-    WidgetCardControlComponent,
-    WidgetCardNodeComponent,
-    WidgetCardAlertComponent,
-    WidgetCardHumComponent,
+    WidgetCardTempDcComponent,
+    WidgetCardTempShComponent,
+    WidgetCardHumDcComponent,
+    WidgetCardHumShComponent,
+    WidgetAreaAirComponent,
+    WidgetCardAirComponent,
     WidgetCardLightComponent
   ],
   providers: [],

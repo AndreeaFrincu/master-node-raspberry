@@ -8,18 +8,18 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { NodesComponent } from 'src/app/modules/nodes/nodes.component';
+import { DatacenterComponent } from 'src/app/modules/data_center/datacenter.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { AlertsComponent } from 'src/app/modules/alerts/alerts.component';
-import { DashboardComponent } from 'src/app/modules/dashboard/dashboard.component';
+import { OverviewComponent } from 'src/app/modules/overview/overview.component';
+import { Smartbuilding } from 'src/app/modules/smart_building/smartbuilding';
 import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
     DefaultComponent,
-    DashboardComponent,
-    NodesComponent,
-    AlertsComponent
+    Smartbuilding,
+    DatacenterComponent,
+    OverviewComponent
   ],
   imports: [
     CommonModule,

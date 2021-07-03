@@ -1,25 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DefaultComponent } from './layouts/default/default.component';
-import { AlertsComponent } from './modules/alerts/alerts.component';
-import { DashboardComponent } from './modules/dashboard/dashboard.component';
-import { NodesComponent } from './modules/nodes/nodes.component';
+import { OverviewComponent } from './modules/overview/overview.component';
+import { Smartbuilding } from './modules/smart_building/smartbuilding';
+import { DatacenterComponent } from './modules/data_center/datacenter.component';
 
 const routes: Routes = [{
   path: '',
   component: DefaultComponent,
   children: [{
     path: '',
-    component: DashboardComponent
+    component: OverviewComponent
   },
-  {
-    path: 'nodes',
-    component: NodesComponent
-  },
-  {
-    path: 'alerts',
-    component: AlertsComponent
-  }]
+    {
+      path: 'smart_building',
+      component: Smartbuilding
+    },
+    {
+      path: 'data_center',
+      component: DatacenterComponent
+    }]
 }];
 
 @NgModule({
