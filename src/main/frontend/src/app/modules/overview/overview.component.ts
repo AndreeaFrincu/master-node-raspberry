@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-alerts',
+  selector: 'app-overview',
   templateUrl: './overview.component.html',
   styleUrls: ['./overview.component.scss']
 })

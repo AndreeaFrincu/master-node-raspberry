@@ -11,13 +11,13 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { DatacenterComponent } from 'src/app/modules/data_center/datacenter.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { OverviewComponent } from 'src/app/modules/overview/overview.component';
-import { Smartbuilding } from 'src/app/modules/smart_building/smartbuilding';
+import { SmartbuildingComponent } from 'src/app/modules/smart_building/smartbuilding.component';
 import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
     DefaultComponent,
-    Smartbuilding,
+    SmartbuildingComponent,
     DatacenterComponent,
     OverviewComponent
   ],

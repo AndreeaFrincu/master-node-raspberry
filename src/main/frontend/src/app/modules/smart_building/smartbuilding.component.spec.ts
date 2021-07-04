@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Smartbuilding } from './smartbuilding';
+import { SmartbuildingComponent } from './smartbuilding.component';
 
 describe('DashboardComponent', () => {
-  let component: Smartbuilding;
-  let fixture: ComponentFixture<Smartbuilding>;
+  let component: SmartbuildingComponent;
+  let fixture: ComponentFixture<SmartbuildingComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Smartbuilding ]
+      declarations: [ SmartbuildingComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Smartbuilding);
+    fixture = TestBed.createComponent(SmartbuildingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
