@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DefaultComponent } from './layouts/default/default.component';
 import { OverviewComponent } from './modules/overview/overview.component';
-import { Smartbuilding } from './modules/smart_building/smartbuilding';
+import { SmartbuildingComponent } from './modules/smart_building/smartbuilding.component';
 import { DatacenterComponent } from './modules/data_center/datacenter.component';
 
 const routes: Routes = [{
@@ -14,7 +14,7 @@ const routes: Routes = [{
   },
     {
       path: 'smart_building',
-      component: Smartbuilding
+      component: SmartbuildingComponent
     },
     {
       path: 'data_center',
