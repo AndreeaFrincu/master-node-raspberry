@@ -27,7 +27,6 @@ public class MetricsData {
     private String location;
     private String collector;
     private String metricType;
-    private boolean isSynchronized;
     private float value;
 
     @PrePersist
@@ -67,14 +66,6 @@ public class MetricsData {
 
     public void setMetricType(String metricType) {
         this.metricType = metricType;
-    }
-
-    public boolean isSynchronized() {
-        return isSynchronized;
-    }
-
-    public void setSynchronized(boolean aSynchronized) {
-        isSynchronized = aSynchronized;
     }
 
     public float getValue() {
