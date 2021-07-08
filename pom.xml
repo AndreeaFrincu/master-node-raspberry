@@ -8,10 +8,10 @@
         <version>2.5.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.springboot.postgres.docker</groupId>
-    <artifactId>springboot-postgres-docker</artifactId>
+    <groupId>ro.mta.ssec</groupId>
+    <artifactId>master-node-raspberry</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-postgres-docker</name>
+    <name>master-node-raspberry</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>16</java.version>
