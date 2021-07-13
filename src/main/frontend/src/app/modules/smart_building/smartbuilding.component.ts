@@ -13,12 +13,12 @@ export class SmartbuildingComponent implements OnInit {
   constructor(private location: Location, private router: Router) { }
 
   ngOnInit() {
-    this.router.routeReuseStrategy.shouldReuseRoute = () => {
-      return false;
-    };
+    // this.router.routeReuseStrategy.shouldReuseRoute = () => {
+    //   return false;
+    // };
   }
 
-  onReloadRoute() {
-    this.router.navigateByUrl("/smart_building");
-  }
+  // onReloadRoute() {
+  //   this.router.navigateByUrl("/smart_building");
+  // }
 }
