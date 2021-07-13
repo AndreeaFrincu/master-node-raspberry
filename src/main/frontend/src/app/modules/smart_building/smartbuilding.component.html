@@ -18,7 +18,10 @@
 <br>
 <mat-divider></mat-divider>
 <h2>Last values</h2>
+<button mat-raised-button color="primary" (click)="onReloadRoute()">refresh</button>
+<br>
 
+<br>
 <div class="stats-card" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
   <mat-card fxFlex="30">
     <app-widget-card-temp-sh label="Temperature" icon="wb_cloudy"></app-widget-card-temp-sh>
