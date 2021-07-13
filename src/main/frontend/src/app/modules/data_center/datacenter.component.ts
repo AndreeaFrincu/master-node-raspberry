@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
+import { Location } from "@angular/common"
 
 @Component({
   selector: 'app-datacenter',
@@ -7,8 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DatacenterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private location: Location, private router: Router) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.router.routeReuseStrategy.shouldReuseRoute = () => {
+      return false;
+    };
+  }
 
+  onReloadRoute() {
+    this.router.navigateByUrl("/data_center");
+  }
 }

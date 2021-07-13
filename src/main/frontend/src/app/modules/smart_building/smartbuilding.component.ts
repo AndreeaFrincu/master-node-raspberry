@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
+import { Location } from "@angular/common"
 
 @Component({
   selector: 'app-smartbuilding',
@@ -8,7 +10,15 @@ import { Component, OnInit } from '@angular/core';
 
 export class SmartbuildingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private location: Location, private router: Router) { }
 
-  ngOnInit(): void { }
+  ngOnInit() {
+    this.router.routeReuseStrategy.shouldReuseRoute = () => {
+      return false;
+    };
+  }
+
+  onReloadRoute() {
+    this.router.navigateByUrl("/smart_building");
+  }
 }
