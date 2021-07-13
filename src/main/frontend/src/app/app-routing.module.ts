@@ -13,11 +13,11 @@ const routes: Routes = [{
     component: OverviewComponent
   },
     {
-      path: 'smart_building',
+      path: 'api/smart_building',
       component: SmartbuildingComponent
     },
     {
-      path: 'data_center',
+      path: 'api/data_center',
       component: DatacenterComponent
     }]
 }];
