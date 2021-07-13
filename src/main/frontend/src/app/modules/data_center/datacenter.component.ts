@@ -12,12 +12,12 @@ export class DatacenterComponent implements OnInit {
   constructor(private location: Location, private router: Router) { }
 
   ngOnInit(): void {
-    this.router.routeReuseStrategy.shouldReuseRoute = () => {
-      return false;
-    };
+    // this.router.routeReuseStrategy.shouldReuseRoute = () => {
+    //   return false;
+    // };
   }
 
-  onReloadRoute() {
-    this.router.navigateByUrl("/data_center");
-  }
+  // onReloadRoute() {
+  //   this.router.navigateByUrl("/data_center");
+  // }
 }
