@@ -58,4 +58,10 @@ public class MetricsController {
         return metricsService.findAllByMetricTypeAndLocation(metricType, location);
     }
 
+    //controller for angular pages paths
+    @RequestMapping({  "/smart_building", "/data_center"})
+    public String index() {
+        return "forward:/index.html";
+    }
+
 }
