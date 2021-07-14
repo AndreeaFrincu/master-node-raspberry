@@ -61,12 +61,12 @@ public class MetricsController {
     //controller for angular pages paths
     @RequestMapping({  "/smart_building"})
     public String smartBuildingForward() {
-        return "forward:/smart_building";
+        return "api/smart_building";
     }
 
     @RequestMapping({ "/data_center"})
     public String dataCenterForward() {
-        return "forward:/data_center";
+        return "api/data_center";
     }
 
 }
